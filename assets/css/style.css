@@ -1,3 +1,8 @@
+body {
+    background: url(./assets/images/fileImages/koipond.jpg);
+    /* background-size: cover; */
+}
+
 h1 {
     font-family: 'Orbitron', sans-serif;
 }
