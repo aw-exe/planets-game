@@ -1,6 +1,12 @@
 //assign the target score to be a random number between 19-120
     //the target score should reset and change each time the user wins or losses
 
+let targetNumber = 23;
+
+$("#get-this-number").text(targetNumber);
+
+let counter = 0;
+
 //assign each planet-img to a random number between 1-12
     //the planet-img values should reset and change each time the user wins or losses
 
