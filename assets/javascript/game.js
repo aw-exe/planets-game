@@ -48,25 +48,26 @@ for(let i=0; i < planets.length; i++) {
 }
 
 //Everytime I try to add my onclick event, my planet images go away. I tried making the planets buttons but then I couldn't get the value of each button to appear in the counter without breaking. 
+$("#planetdiv").on("click", ".img-thumbnail", function() {
+    let planetValue = $(this).attr("planetValue");
+    // console.log(typeof counter);
+    // console.log(typeof planetValue);
+    planetValue = parseInt(planetValue);
+    counter += planetValue;
+    console.log(planetValue);
+    alert("New score: " + counter);
+    if (counter === targetNumber) {
+      alert("You win!");
+    }
+    else if (counter >= targetNumber) {
+      alert("You lose!!");
+    }
 
-// (".img-thumbnail")on.("click", function() {
-//     var planetValue = ($(this).attr("data-planetValue"));
-//     planetValue = parseInt(planetValue);
-//     counter += planetValue;
-//     alert("New score: " + counter);
-//     if (counter === targetNumber) {
-//       alert("You win!");
-//     }
-//     else if (counter >= targetNumber) {
-//       alert("You lose!!");
-
-// }
-
-});
+}); //closes planetdiv
 
 
 
-        
+}); // closes document.ready   
 
 //value of each planet-img appears when clicked in the 'your score' card of the html
 
