@@ -1,11 +1,15 @@
 // //assign the target score to be a random number between 19-120
 // //the target score should reset and change each time the user wins or losses
+let counter = 0;
+let wins = 0;
+let losses = 0;
+
 
 $(document).ready(function() {
     const targetNumber = (Math.floor(Math.random()*120) + 19);
     $("#get-this-number").text(targetNumber);
     let sum = 0;
-    let counter = 0;
+   
 
 const planet1 = {
     name: "mercury",
@@ -45,6 +49,7 @@ for(let i=0; i < planets.length; i++) {
     // $("#planetdiv").append(planetBtn)
     // planetBtn.append(newPlanet)
     $("#planetdiv").append(newPlanet)
+
 }
 
 //Everytime I try to add my onclick event, my planet images go away. I tried making the planets buttons but then I couldn't get the value of each button to appear in the counter without breaking. 
@@ -54,7 +59,11 @@ $("#planetdiv").on("click", ".img-thumbnail", function() {
     // console.log(typeof planetValue);
     planetValue = parseInt(planetValue);
     counter += planetValue;
-    console.log(planetValue);
+    //the chunk of code below was intended to generate the user score, wins and losses on the page, but I couldn't get it to work so I went with the alerts instead so the game would be somewhat functional.
+    // $("#userScore").text("counter");
+    // $("#userWins").text("wins");
+    // $("#userLosses").text("losses");
+    // console.log(planetValue);
     alert("New score: " + counter);
     if (counter === targetNumber) {
       alert("You win!");
