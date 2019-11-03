@@ -1,9 +1,11 @@
 //Variables
 let counter = 0;
+let targetNumber = 0;
 let usersScore = 0;
 let wins = 0;
 let losses = 0;
 
+const planets = ("Mercury", "Venus", "Mars", "Jupiter")
 
 //To create planet images
 const planet1 = {
@@ -33,9 +35,9 @@ $(document).ready(function () {
     $("#get-this-number").text(targetNumber);
     let sum = 0;
 
-    // to update planet values after each game
+    //to update planet values after each game
     function updatePlanets() {
-        for (var i = 0; i < planetsArray.length; i++) {
+        for (var i = 0; i < planets.length; i++) {
             var randomVal = Math.floor(Math.random() * 15 + 1);
             $("#planetDiv" + i).attr('val', randomVal)
         }
@@ -44,9 +46,8 @@ $(document).ready(function () {
     // to reset game
     function resetGame() {
         updatePlanets();
-        targetScoreSelector();
+        targetNumber();
         usersScore = 0;
-        $("#usersScore-text").text(usersScore);
     }
 
 
@@ -71,16 +72,17 @@ $(document).ready(function () {
 
         $("#usersScore").text(counter);
 
-        if (counter === targetScore) {
+
+        if (counter === targetNumber) {
             alert("You win!");
             wins++;
-            $("#userWins").text(userWins);
+            $("#userWins").text("You win!");
             resetGame();
 
-        } else if (counter > targetScore) {
+        } else if (counter > targetNumber) {
             alert("Final User Score: " + counter + ". You busted! Try again!");
             losses++;
-            $("#userLosses").text(userLosses);
+            $("#userLosses").text("You busted! Try again!");
             resetGame();
         }
 
