@@ -17,80 +17,82 @@
 
 <body>
 
-<div class="container">
-
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">    
-            <h1 class="display-4 text-center">Planets Game!</h1>
-        </div>
-    </div>
-
     <div class="container">
-        <div class="row" id="row-1">
-            <div class="col">
-                <div class="card text-center">
-                    <h5 class="card-header">Instructions</h5>
-                    <div class="card-body">
-                        <p class="card-text">Each planet below is worth a certain amount of points, click the planets in
-                            the correct order to hit the target number. Go over the target number and you loose.</p>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4 text-center">Planets Game!</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" id="row-1">
+                <div class="col">
+                    <div class="card text-center">
+                        <h5 class="card-header">Instructions</h5>
+                        <div class="card-body">
+                            <p class="card-text">Each planet below is worth a certain amount of points, click the
+                                planets in
+                                the correct order to hit the target number. Go over the target number and you loose.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="row" id="row-2">
-            <div class="col">
-                <div class="card text-center" style="width: 20rem;">
-                    <h5 class="card-header">Your Score</h5>
-                    <div class="card-body" id="usersScore"></div>
+        <br>
+        <div class="container">
+            <div class="row" id="row-2">
+                <div class="col">
+                    <div class="card text-center" style="width: 20rem;">
+                        <h5 class="card-header">Your Score</h5>
+                        <div class="card-body" id="usersScore"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card text-center" style="width: 45rem;">
-                    <h5 class="card-header">Choose a planet!</h5>
-                    <div class="card-body" id="planetdiv">
-                        <!-- <img src="./assets/images/mercury.jpg" alt="Mercury" class="img-thumbnail" id="mercury-img">
+                <div class="col">
+                    <div class="card text-center" style="width: 45rem;">
+                        <h5 class="card-header">Choose a planet!</h5>
+                        <div class="card-body" id="planetdiv">
+                            <!-- <img src="./assets/images/mercury.jpg" alt="Mercury" class="img-thumbnail" id="mercury-img">
                         <img src="./assets/images/venus.jpg" alt="Venus" class="img-thumbnail" id="venus-img">
                         <img src="./assets/images/mars.jpg" alt="Mars" class="img-thumbnail" id="mars-img">
                         <img src="./assets/images/jupiter.jpg" alt="Jupiter" class="img-thumbnail" id="jupiter-img"> -->
+                            <!--SAMPLE LINE TO TROUBLESHOOT TERMINAL PLEASE IGNORE -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row" id="row-3">
+                <div class="col">
+                    <div class="card text-center" style="width: 20rem;">
+                        <h5 class="card-header">Wins</h5>
+                        <div class="card-body" id="userWins"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center" style="width: 45rem;">
+                        <h5 class="card-header">Get this Number!</h5>
+                        <div class="card-body">
+                            <p class="card-text"><span id="get-this-number"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row" id="row-4">
+                <div class="col">
+                    <div class="card text-center" style="width: 20rem;">
+                        <h5 class="card-header">Losses</h5>
+                        <div class="card-body" id="userLosses"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br>
-    <div class="container">
-        <div class="row" id="row-3">
-            <div class="col">
-                <div class="card text-center" style="width: 20rem;">
-                    <h5 class="card-header">Wins</h5>
-                    <div class="card-body" id="userWins"></div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card text-center" style="width: 45rem;">
-                    <h5 class="card-header">Get this Number!</h5>
-                    <div class="card-body">
-                        <p class="card-text"><span id="get-this-number"></span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="row" id="row-4">
-            <div class="col">
-                <div class="card text-center" style="width: 20rem;">
-                    <h5 class="card-header">Losses</h5>
-                    <div class="card-body" id="userLosses"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
